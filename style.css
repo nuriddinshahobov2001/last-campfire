@@ -1,0 +1,30 @@
+html, body {
+  margin: 0; height: 100%; background: #05070f; overflow: hidden;
+  font-family: sans-serif;
+  user-select: none; -webkit-user-select: none; -webkit-touch-callout: none;
+}
+#game { width: 100%; height: 100%; }
+canvas { display: block; touch-action: none; -webkit-tap-highlight-color: transparent; }
+
+/* shown while the scripts load, replaced by the game; shows the error if loading fails */
+#boot {
+  position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+  color: #ffd9a0; font-size: 28px; text-align: center; padding: 24px; box-sizing: border-box;
+}
+#boot.failed { color: #ff8a8a; }
+
+/* phones and tablets: the game needs a keyboard and a mouse */
+#touch-notice {
+  position: fixed; inset: 0; display: none; flex-direction: column; align-items: center;
+  justify-content: center; gap: 20px; padding: 24px; box-sizing: border-box; text-align: center;
+  background: rgba(5, 7, 15, 0.96); color: #ffd9a0; font-size: 22px; z-index: 10;
+}
+#touch-notice button {
+  font: inherit; font-weight: bold; color: #10151f; background: #ffb36b; border: 0;
+  padding: 12px 28px; border-radius: 6px; cursor: pointer;
+}
+
+.noscript {
+  position: fixed; inset: 0; z-index: 20; background: #05070f; color: #ff8a8a; display: flex;
+  align-items: center; justify-content: center; font-size: 24px; text-align: center; padding: 24px;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рассвет</title>
+  <meta name="description" content="Рассвет — 2D игра на выживание в браузере. Продержись одну ночь у костра: отстреливайся от монстров, ломай ящики, побеждай боссов и дождись рассвета.">
+  <meta name="theme-color" content="#05070f">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Рассвет">
+  <meta property="og:description" content="2D выживание в браузере: продержись ночь до рассвета.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game"></div>
+  <div id="boot">Загрузка… / Loading…</div>
+  <noscript><div class="noscript">Для игры нужен включённый JavaScript.<br>JavaScript must be enabled to play.</div></noscript>
+  <div id="touch-notice">
+    <div>Игра рассчитана на компьютер: нужны клавиатура и мышь.<br>Made for desktop: a keyboard and a mouse are required.</div>
+    <button id="touch-ok" type="button">Всё равно играть / Play anyway</button>
+  </div>
+
+  <script src="boot.js"></script>
+  <script src="vendor/phaser.min.js"></script>
+  <!-- platform:sdk (tools/build.js adds the Yandex Games SDK here for --target yandex) -->
+  <!-- scripts:begin (tools/build.js packs everything between these markers into game.js) -->
+  <script src="src/i18n.js"></script>
+  <script src="src/storage.js"></script>
+  <script src="src/config.js"></script>
+  <script src="src/upgrades.js"></script>
+  <script src="src/systems/Spawner.js"></script>
+  <script src="src/systems/Weapons.js"></script>
+  <script src="src/systems/Events.js"></script>
+  <script src="src/systems/Crates.js"></script>
+  <script src="src/systems/Dash.js"></script>
+  <script src="src/systems/HeldKeys.js"></script>
+  <script src="src/systems/Drone.js"></script>
+  <script src="src/systems/BossSkills.js"></script>
+  <script src="src/systems/Shop.js"></script>
+  <script src="src/platform.js"></script>
+  <script src="src/art/textures.js"></script>
+  <script src="src/entities/Player.js"></script>
+  <script src="src/entities/Enemy.js"></script>
+  <script src="src/entities/Capsule.js"></script>
+  <script src="src/entities/Drone.js"></script>
+  <script src="src/systems/EnemyAbilities.js"></script>
+  <script src="src/systems/BossAbilities.js"></script>
+  <script src="src/systems/EventFx.js"></script>
+  <script src="src/scenes/BootScene.js"></script>
+  <script src="src/scenes/MenuScene.js"></script>
+  <script src="src/scenes/GameScene.js"></script>
+  <script src="src/scenes/UIScene.js"></script>
+  <script src="src/scenes/EndScene.js"></script>
+  <script src="src/scenes/ShopScene.js"></script>
+  <script src="src/main.js"></script>
+  <!-- scripts:end -->
+</body>
+</html>

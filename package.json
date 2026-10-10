@@ -1,0 +1,13 @@
+{
+  "name": "rassvet",
+  "version": "1.0.0",
+  "description": "Рассвет: 2D игра на выживание в браузере (Phaser 3)",
+  "private": true,
+  "scripts": {
+    "test": "node tests/logic.test.js",
+    "build": "node tools/build.js",
+    "release": "node tools/build.js --zip",
+    "release:yandex": "node tools/build.js --target yandex --zip",
+    "release:all": "node tools/build.js --zip && node tools/build.js --target yandex --zip"
+  }
+}
